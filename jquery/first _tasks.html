@@ -31,15 +31,15 @@
 		</ul>
 		<h4><i>1</i>,<i>2</i>,3,4,5</h4>
 		<script>
-			var elems = $('.www');
-            elems.html('!!!');
-            var h2 = $('h2').html('!').css({'color': 'blue', 'font-size': '30px'});
-            var h3 = $('h3').css('color','red');
-            var test = $('h1.test').css('color', 'red');
-            var p = $('p + p').css('color', 'red');
-            var li = $('li.www ~ li').css('color', 'red');//выделит все теги, которые следуют за тегом с классом www
-            var i = $('h4 i').css('color', 'red');
-            var ii = $('h4 > i').css('color', 'red'); //непосредственно внутри h4
+			var $elems = $('.www');
+            $elems.html('!!!');
+            var $h2 = $('h2').html('!').css({'color': 'blue', 'font-size': '30px'});
+            var $h3 = $('h3').css('color','red');
+            var $test = $('h1.test').css('color', 'red');
+            var $p = $('p + p').css('color', 'red');
+            var $li = $('li.www ~ li').css('color', 'red');//выделит все теги, которые следуют за тегом с классом www
+            var $i = $('h4 i').css('color', 'red');
+            var $ii = $('h4 > i').css('color', 'red'); //непосредственно внутри h4
 		</script>
 	</body>
 </html>
