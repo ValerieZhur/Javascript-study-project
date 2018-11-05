@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Задачи на html, text, css-->
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -6,13 +6,40 @@
 		<script type="text/javascript" src="jquery-3.3.1.js"></script>
 	</head>
 	<body>
+		<h2>Заголовок h2</h2>
+		<h3>Заголовок h3</h3>
+		<h3>Заголовок h3</h3>
+		<h3>Заголовок h3</h3>
 		<p class="www">Абзац.</p>
 		<p class="www">Абзац.</p>
 		<p class="www">Абзац.</p>
+		<h2>Заголовок h2</h2>
 		<p>Абзац.</p>
+		<h1 class="test"> class test</h1>
+		<h1 class='test'>заголовок h1</h1>
+		<p class="test">paragraph class test
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+		</p>
+		<ul>Список
+        	<li></li>
+        	<li class='www'></li>
+        	<li></li>
+       	    <li></li>
+		</ul>
+		<h4><i>1</i>,<i>2</i>,3,4,5</h4>
 		<script>
 			var elems = $('.www');
             elems.html('!!!');
+            var h2 = $('h2').html('!').css({'color': 'blue', 'font-size': '30px'});
+            var h3 = $('h3').css('color','red');
+            var test = $('h1.test').css('color', 'red');
+            var p = $('p + p').css('color', 'red');
+            var li = $('li.www ~ li').css('color', 'red');//выделит все теги, которые следуют за тегом с классом www
+            var i = $('h4 i').css('color', 'red');
+            var ii = $('h4 > i').css('color', 'red'); //непосредственно внутри h4
 		</script>
 	</body>
 </html>
