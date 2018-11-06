@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+	<ol>
+		<li>A</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+		<li>E</li>
+		<li>F</li>
+	</ol>
+ <script>
+var li = document.getElementsByTagName('li')
+for (var i = 0; i < li.length; i++) {
+	li[i].addEventListener('click', func);
+}
+function func(){
+	this.parentElement.removeChild(this);
+}
+</script>
+</body>
+</html>

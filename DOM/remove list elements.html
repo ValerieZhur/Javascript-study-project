@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+	<ol id="parent">
+		<li>A</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+		<li>E</li>
+		<li>F</li>
+	
+	</ol>
+<input type='submit' value="Click me!" id="button">
+ <script>
+ var button= document.getElementById('button');
+ button.addEventListener('click', func);
+ function func() {
+ 	var parent = document.getElementById('parent');
+ 	parent.removeChild(parent.lastElementChild);
+ }
+</script>
+</body>
+</html>

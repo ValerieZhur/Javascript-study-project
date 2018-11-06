@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+	<ul id='ul'>
+		<li id ='elem'>???</li>
+		<li>....</li>
+	</ul>
+
+ <script>
+ var ul = document.getElementById('ul');
+ var before = document.getElementById('elem');
+ var li = document.createElement('li');
+ li.innerHTML = '!!!';
+ ul.insertBefore(li, before); /*вставить элемент перед другим элементом*/
+ </script>
+</body>
+</html>

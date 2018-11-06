@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+div {
+ 	 border: 1px solid black;
+ 	 height: 100px;
+ 	 width: 100px;
+ 	 background-color: blue;
+ }
+ button {
+ 	margin: 25px;
+ 	color: blue;
+ }
+
+</style>
+<body>
+<div id="elem">
+	<button id="button">Click me!</button>
+</div>
+ <script>
+		var elem = document.getElementById('elem');
+		var button = document.getElementById('button');
+		button.addEventListener('click', func);
+		function func(){
+			var style = getComputedStyle(elem);
+			alert('width: ' + style.width);
+			alert('height: ' + style.height);
+		}
+
+</script>
+</body>
+</html>

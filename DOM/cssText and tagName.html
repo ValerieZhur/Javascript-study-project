@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+	<p id="elem">Привет мир!</p>
+	<p class="www" ="elem">Привет мир!</p>
+	<p class="www">Привет мир!</p>
+	<p class="www">Привет мир!</p>
+
+
+ <script>
+ var elem = document.getElementById('elem');
+ elem.style.cssText = "color: red; font-size: 30px; border: 1px solid black";
+ elem.addEventListener('click', func);
+ function func() {
+ 	alert(this.tagName.toLowerCase());
+ }
+ var elems = document.querySelectorAll('.www');
+ for (var i = 0; i < elems.length; i++) {
+ 	elems[i].innerHTML = elems[i].innerHTML +elems[i].tagName.toLowerCase();
+ }
+
+
+ </script>
+</body>
+</html>

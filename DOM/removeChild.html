@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+<ol id="parent">
+	<li>*******</li>
+	<li id="child">!!!!!!!</li>
+	<li>???????</li>
+</ol>
+<button id = 'button'>Click me</button>
+ <script>
+   
+  var button = document.getElementById('button');
+ button.addEventListener('click', func);
+ function func() {
+ 	 		 var parent = document.getElementById('parent');
+ 			 var child = document.getElementById('child'); 
+			parent.removeChild(child); /*применяется к родительскому элементу, для удаления дочернего*/
+ }
+
+</script>
+</body>
+</html>

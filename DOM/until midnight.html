@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+ <style>
+   table {
+    width: 600px;
+    border: 1px solid black; 
+    margin: auto; 
+
+   }
+   td, th{
+    height: 30px;
+     border: 1px solid black; 
+    width: 200px;
+    text-align: center;
+   }
+   p {
+     text-align: center;
+   }
+  </style>
+ <script>                                         
+  function loadPage(){
+    window.timerId = window.setInterval(timer, 1000);
+  }
+  function timer(){
+    var hours = document.getElementById('hour');
+    var minutes = document.getElementById('minute');
+    var seconds = document.getElementById('second');
+    var date = new Date();
+    hours.innerHTML =   addZero(23 - date.getHours());
+    minutes.innerHTML = addZero(59 - date.getMinutes());
+    seconds.innerHTML = addZero(59 - date.getSeconds());
+  }
+  function addZero(num){
+      if(num <=9) return '0'+num;
+        else return num;
+    }
+  </script>
+</head> 
+<body onload="loadPage()">
+  <p>До полуночи осталось:</p>
+  <table  cellspacing="0" >
+    <tr>
+       <th>Часы</th>
+       <th>Минуты</th>
+       <th>Секунды</th>
+    </tr>
+    <tr>
+         <td id="hour">00</td>
+         <td id="minute">00</td>
+         <td id="second">00</td>
+    </tr>
+ </table>
+</body>
+</html>

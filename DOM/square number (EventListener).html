@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<p>2</p>
+<p>4</p>
+<p>6</p>
+ <script>
+var parags = document.getElementsByTagName('p');
+for (var i = 0; i < parags.length; i++) {
+	parags[i].addEventListener('click', square);
+}
+
+function square(){
+	this.innerHTML = parseInt(this.innerHTML * this.innerHTML);
+
+}
+ </script>
+</body>
+</html>

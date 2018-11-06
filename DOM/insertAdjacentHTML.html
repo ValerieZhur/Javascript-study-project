@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+<ul id='elem'>
+	<li>???</li>
+	<li>!!!</li>
+	<li>***</li>
+</ul>
+
+ <script>
+ 	var elem = document.getElementById('elem');
+ 	elem.insertAdjacentHTML('beforeBegin', '<span>!!!</span>'); /*вставить строку HTML кода перед  опорным элементом */
+ 	elem.insertAdjacentHTML('afterEnd', '<span>!!!</span>'); /*вставить строку HTML кода после опорного элемента */
+ 	elem.insertAdjacentHTML('afterBegin', '<span>!!!</span>'); /*вставить строку HTML кода в начало опорного элемента*/
+ 	elem.insertAdjacentHTML('beforeEnd', '<span>!!!</span>'); /*вставить строку HTML кода в конец опорного элемента*/
+
+ </script>
+
+ </script>
+</body>
+</html>

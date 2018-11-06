@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<input type="text" value="1">
+<input type="text" value="2">
+<input type="text" value="3">
+<p id="test"></p>
+ <script>
+ var inputs = document.getElementsByTagName('input');
+ var test = document.getElementById('test');
+ for (var i = 0; i<inputs.length; i++) {
+     inputs[i].addEventListener('blur', func);
+ }
+ function func(){
+ 	test.innerHTML = this.value;
+ }
+ </script>
+</body>
+</html>

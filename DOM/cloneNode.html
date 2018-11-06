@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+<input type="text" placeholder="Enter text" id="input">
+<input type="submit" value="Click me" id='button'>
+ <script>
+ 	var button = document.getElementById('button');
+ 	button.addEventListener('click', func);
+ 	function func(){
+ 		var input = document.getElementById('input');
+ 		var clone = input.cloneNode(true);
+ 		input.parentElement.appendChild(clone);
+ 	}
+
+</script>
+</body>
+</html>

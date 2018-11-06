@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+<p id="elem"></p>
+
+ <script>
+ var elem = document.getElementById('elem');//работа с классами 
+ elem.classList.add('www');
+ elem.classList.remove('www');
+ elem.classList.contains('www'); //проверить наличие класса
+ elem.classList.toggle('www'); //добавить ему класс www, если его нет и удалить - если есть
+ var length = elem.classList.length;
+ document.write(length);
+ elem.classList.add('ddd');
+ var classNames = elem.classList;
+ for (var i = 0; i < classNames.length; i++) {//Вывести последовательно алертом  классы
+ 	alert(classNames[i]); //узнать количество классов elem.classList.length
+ }
+
+ </script>
+</body>
+</html>
