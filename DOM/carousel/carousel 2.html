@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+ <style>
+    div {
+    text-align: center;
+    }
+    input {
+      width: 150px;
+    }
+  </style>
+ <script>
+  function clickButton(element){
+    window.timerId = window.setInterval(timer, 500);
+    element.disabled = true;
+
+      }
+
+
+    function timer(){
+      var img = document.getElementById('img');
+      var img2 = document.getElementById('img2');
+      var img3 = document.getElementById('img3');
+       var imgSrc1 = img.src;
+       var imgSrc2 = img2.src;
+       var imgSrc3 = img3.src;
+       img.src =  imgSrc2;
+       img2.src = imgSrc3;
+       img3.src = imgSrc1;
+
+
+    }
+                                              
+  
+  </script>
+</head> 
+<body >
+  <div>
+ <img src="1.png" id='img'>
+ <img src="2.png" id='img2'>
+ <img src="3.png" id='img3'>
+ <br><br>
+ <input type="submit" value="Запустить карусель" onclick="clickButton(this)">
+ </div>
+</body>
+</html>

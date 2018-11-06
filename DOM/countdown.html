@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+ <style>
+    div {
+    text-align: center;
+    }
+  </style>
+ <script>
+  function clickButton(){
+    window.timerId = window.setInterval(timer, 500);
+    
+    }
+   function stop(){
+      window.clearInterval(window.timerId);
+    }
+   
+   function timer() {
+     var elem = document.getElementById('timer');
+     var element = document.getElementById('input');
+    element.disabled = true;
+        elem.innerHTML = parseInt(elem.innerHTML);
+    if (elem.innerHTML > 0 ){
+       elem.innerHTML =  elem.innerHTML - 1;
+    } else {
+      stop();
+    element.outerHTML = '<p>Обратный отсчет завершен</p>';
+      
+    }
+   } 
+  </script>
+</head>
+<body>
+  <div>
+ <h1 id='timer'>10</h1>
+ <input type="submit" value="Запустить таймер!" onclick="clickButton()" id ='input'>
+ </div>
+</body>
+</html>
+
+<!--   //Запускает таймер
+    function go(){
+      window.timerId = window.setInterval(timer, 300);
+      document.getElementById('go').disabled = true;
+    }
+    //Останавливает таймер
+    function stop(){
+      window.clearInterval(window.timerId);
+    }
+    function timer(){
+      var test = document.getElementById('test');
+      var number = parseInt(test.innerHTML)-1;
+      test.innerHTML = number;
+      if(number == 0) {
+        stop();
+        var timetStop = document.getElementById('stop');
+        timetStop.innerHTML = 'Обратный отсчет завершен.';
+      }
+    } -->

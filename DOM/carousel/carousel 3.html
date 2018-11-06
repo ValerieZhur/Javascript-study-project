@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+ <style>
+    div {
+    text-align: center;
+    }
+    input {
+      width: 150px;
+    }
+  </style>
+ <script>
+ function start(element){
+  window.timerId = window.setInterval(timer, 500);
+  var input = document.getElementById('1');
+  input.disabled = true;
+   var input2 = document.getElementById('2');
+  input2.disabled = false;
+ }
+
+ function stop(element) {
+  window.clearInterval(window.timerId);
+  var input = document.getElementById('1');
+  input.disabled = false;
+  var input2 = document.getElementById('2');
+  input2.disabled = true;
+  
+ }
+
+ function timer() {
+  var img = document.getElementById('img');
+  var img2 = document.getElementById('img2');
+  var img3 = document.getElementById('img3');
+  var img4 = document.getElementById('img4');
+  var img5 = document.getElementById('img5');
+  var img6 = document.getElementById('img6');
+  var imgSrc = img.src;
+  var imgSrc2 = img2.src;
+  var imgSrc3 = img3.src;
+  var imgSrc4 = img4.src;
+  var imgSrc5 = img5.src;
+  var imgSrc6 = img6.src;
+  img.src = imgSrc2;
+  img2.src = imgSrc3;
+  img3.src = imgSrc4;
+  img4.src = imgSrc5;
+  img5.src = imgSrc6;
+  img6.src = imgSrc;
+ }
+                                              
+  
+  </script>
+</head> 
+<body >
+  <div>
+       <img src="1.png" id='img'>
+       <img src="2.png" id='img2'>
+       <img src="3.png" id='img3'>
+       <img src="4.png" id='img4'>
+       <img src="5.png" id='img5'>
+       <img src="6.png" id='img6'>
+ <br><br>
+ <input type="submit" value="Запустить карусель" onclick="start()" id ='1'>
+ <input type="submit" value="Остановить карусель" onclick="stop()" id= '2' disabled>
+ </div>
+</body>
+</html>

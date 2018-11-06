@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<script>
+  function clickButton() {
+    var elems = document.getElementsByTagName('a');
+    for (var i =0; i<elems.length; i++){
+      elems[i].innerHTML = elems[i].innerHTML+' ('+elems[i].getAttribute('href')+')';
+    }
+  }
+  </script>
+</head>
+<body>
+<a href="http://theory.phphtml.net/tasks/javascript/dom/rabota-s-elementami-stranicy-v-javascript.html">ссылка 1</a>
+<br><br>
+<a href="http://theory.phphtml.net/tasks/javascript/dom/rabota-s-elementami-stranicy-v-javascript.html">ссылка 1</a>
+<br><br>
+<a href="http://theory.phphtml.net/tasks/javascript/dom/rabota-s-elementami-stranicy-v-javascript.html">ссылка 1</a>
+<br><br>  
+ <input type="submit" value="Нажмите на меня!" onclick="clickButton()">
+</body>
+</html>

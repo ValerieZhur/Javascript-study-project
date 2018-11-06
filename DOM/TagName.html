@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script>
+  function clickButton() {
+    var p = document.getElementsByTagName('p');
+    p[0].innerHTML = 'Ку-ку!';
+    p[1].innerHTML = 'Ку-ку!';
+    p[2].innerHTML = 'Ку-ку!';
+    p[3].innerHTML = 'Ку-ку!';
+  }
+  </script>
+</head>
+<body>
+   <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+   <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+   <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+   <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+   <h2>А я h2 и не поменяюсь!</h2>
+  <button onclick="clickButton()">Нажми на меня!</button>
+</body>
+</html>

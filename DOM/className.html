@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+  <script>
+  function clickButton() {
+    var p = document.getElementsByClassName('www');
+    for (var i =0; i<p.length; i++){
+      p[i].innerHTML = i;
+    }
+  }
+  </script>
+<body>
+  <h2 class="www">Заголовок с классом www.</h2>
+  <p class="www">Абзац с классом www.</p>
+  <p class="www">Абзац с классом www.</p>
+  <p>Просто абзац, не поменяется.</p>
+  <button onclick="clickButton()"> Нажми на меня!</button>
+</body>
+</html>

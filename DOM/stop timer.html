@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    div {
+    text-align: center;
+    }
+  </style>
+ <script>
+  function clickButton(){
+    timerId = window.setInterval(timer, 1000);
+  
+  }
+    function clickButton2 (elem){
+     window.clearInterval(window.timerId);
+         
+   }
+   function timer(){
+     var elem = document.getElementById('timer');
+     elem.innerHTML = parseInt(elem.innerHTML) + 1;
+     var input = document.getElementById('input');
+      input.disabled = false;
+   }
+  
+  </script>
+</head>
+<body>
+  <div>
+ <h2 id="timer">0</h2>
+ <input type="submit" value="Запустить таймер!" onclick="clickButton(this)">
+ <input type="submit" value="Остановить таймер!" onclick="clickButton2()" id ="input" disabled>
+ </div>
+</body>
+</html>

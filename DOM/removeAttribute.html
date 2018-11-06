@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+  <style>
+    .my-class{
+      color: red;
+    }
+  </style>
+  <script>
+  function clickButton() {
+    var elem = document.getElementById('test'); 
+    alert(elem.getAttribute('class'));
+    
+  }
+    function clickButton2() {
+      var elem = document.getElementById('test');
+      elem.removeAttribute('class');
+      alert('Класс удален! Нажми на первую кнопку, чтобы проверить это!');
+    }
+  </script>
+<body>
+   <p id = "test" class="my-class">
+		Абзац с class="my-class".
+	</p>
+  <br><br>
+  <input type="submit" onclick="clickButton()" value='Нажми - и я выведу класс абзаца.' >
+  <br><br>
+  <input type="submit" onclick="clickButton2()" value='Нажми и я удалю атрибут класса из абзаца'>
+</body>
+</html>

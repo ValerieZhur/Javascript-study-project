@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+ <style>
+    div {
+    text-align: center;
+    }
+  </style>
+ <script>
+  function loadPage(){
+    window.timerId = window.setInterval(timer, 500);
+      }
+
+
+    function timer(){
+      if(window.numb == undefined || window.numb == 3) {//картинки от 1 до 10
+        window.numb = 1;
+      } else window.numb = window.numb + 1;
+      var img = document.getElementById('img');
+      img.src = window.numb+'.png'
+    }
+ 
+                                                                                
+  
+  </script>
+</head> 
+<body onload ="loadPage()">
+  <div>
+ <img src="1.png" id = 'img'>
+ </div>
+</body>
+</html>
+
+
+<!-- function timer() {
+  var elem = document.getElementById('test');
+  elem.value = parseInt(elem.value)+1;
+
+  window.setTimeout(timer, 1000); //рекурсия
+} -->
+
+
+  

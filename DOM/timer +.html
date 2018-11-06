@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    div {
+    text-align: center;
+    }
+  </style>
+ <script>
+  function clickButton(){
+    window.setInterval(timer, 1000);
+  }
+   function timer(){
+     var elem = document.getElementById('timer');
+     elem.innerHTML = parseInt(elem.innerHTML) + 1;
+   }
+  </script>
+</head>
+<body>
+  <div>
+ <h2 id="timer">0</h2>
+ <input type="submit" value="Нажми на меня!" onclick="clickButton()">
+ </div>
+</body>
+</html>
