@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    button {
+      width: 200px;
+    }
+  </style>
+  <script>
+    function clickButton(element){
+     element.disabled = 'true'; 
+     element.style.cursor = 'no-drop';
+    }
+  </script>
+</head>
+<body>
+  <button onclick="clickButton(this)">Нажми на меня!</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    input[type="submit"]{
+      width: 170px;
+    }
+  </style>
+  <script>
+    function clickButton(element){
+      var input = document.getElementById('input');
+      input.value = input.value + element ;
+    }
+  
+  </script>
+</head>
+<body>
+  <input type="text" id="input">
+  <br><br>
+  <input type="submit" value="Я добавлю +" onclick='clickButton("+")'>
+  <br>
+  <input type="submit" value="Я добавлю -" onclick='clickButton("-")'>
+  <br>
+  <input type="submit" value="Я добавлю /" onclick='clickButton("/")'>
+  <br>
+  <input type="submit" value="Я добавлю *" onclick='clickButton("*")'>
+  <br><br>
+  <input type="submit" value="1" onclick='clickButton("1")'>
+  <br>
+  <input type="submit" value="2" onclick='clickButton("2")'>
+  <br>
+  <input type="submit" value="3" onclick='clickButton("3")'>
+  <br>
+  <input type="submit" value="4" onclick='clickButton("4")'>
+  <br>
+  <input type="submit" value="5" onclick='clickButton("5")'>
+  <br>
+  <input type="submit" value="6" onclick='clickButton("6")'>
+  <br>
+  <input type="submit" value="7" onclick='clickButton("7")'>
+  <br>
+  <input type="submit" value="8" onclick='clickButton("8")'>
+  <br>
+  <input type="submit" value="9" onclick='clickButton("9")'>
+  <br>
+  <input type="submit" value="0" onclick='clickButton("0")'>
+  
+</body>
+</html>

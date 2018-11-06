@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    input {
+      width: 200px;
+    }
+  </style>
+  <script>
+   function clickButton(){
+     var input1 = document.getElementById('input1');
+     var input2 = document.getElementById('input2');
+     input2.disabled = 'false';
+     var num = Number(input1.value);
+     var square = num*num;
+     input2.value = square;
+     
+   }
+  </script>
+</head>
+<body>
+<input type="text" placeholder="Введите число" id="input1">
+<input type="text" value ="Здесь появится результат" id="input2" disabled>
+  <button onclick="clickButton()">Нажми на меня!</button>
+</body>
+</html>
