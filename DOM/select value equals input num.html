@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<select id='select'>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
+  <option value="4">Четыре</option>
+  <option value="5">Пять</option>
+</select>
+<input type="text" id='input'>
+<button id='button'>Click me!</button>
+  <script> 
+     var button = document.getElementById('button');
+     button.addEventListener('click', func);
+     function func() {
+        var input = document.getElementById('input');
+        var select = document.getElementById('select'); 
+        select.value = input.value ;
+     }
+</script>
+</body>
+</html>

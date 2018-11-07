@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style >
+table {
+  margin: 50px auto;
+ border-collapse: separate;
+ border-spacing: 50px;
+}
+ img {
+   width: 100px;
+   height: 100px;
+}
+</style>
+<body>
+<table id = 'table'>
+  <tr>
+    <td><img src='11.jpg'></td>
+    <td><img src='11.jpg'></td>
+    <td><img src='11.jpg'></td>
+  </tr>
+  <tr>
+    <td><img src='22.jpg'></td>
+    <td><img src='22.jpg'></td>
+    <td><img src='22.jpg'></td>
+  </tr>
+  <tr>
+    <td><img src='33.jpg'></td>
+    <td><img src='33.jpg'></td>
+    <td><img src='33.jpg'></td>
+  </tr>
+</table>
+ <script>
+ var table = document.getElementById('table');
+ var img = document.getElementsByTagName('img');
+ for (var i = 0; i < img.length; i++) {
+   img[i].addEventListener('click' , func);
+ }
+ function func() {
+  this.style.width = '200px';
+  this.style.height = '200px';
+  this.removeEventListener('click', func);
+  this.addEventListener('click', reBig);
+  }
+  function reBig(){
+  this.style.width = '100px';
+  this.style.height = '100px';
+  this.removeEventListener('click', reBig);
+  this.addEventListener('click', func);
+  }
+
+/* function func() {
+    event.target.style.width = '200px';
+    event.target.style.height = '200px';
+  
+ }*/
+ 
+
+ 
+ 
+</script>
+</body>
+</html>

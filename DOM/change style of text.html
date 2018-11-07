@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style >
+
+</style>
+<body>
+<p id='p'> Я люблю Javascript!<p>
+<input type="checkbox" value = 'across'>Перечеркнуть
+<input type="checkbox" value = 'bold'>Сделать жирным
+<input type="checkbox" value = 'red'>Сделать красным
+ <script>
+ var checkbox = document.getElementsByTagName('input');
+ var p = document.getElementById('p');
+ for (var i = 0; i < checkbox.length; i++) {
+   checkbox[i].addEventListener('change', func);
+ }
+ function func(){
+  if ( this.checked ) {
+    if (this.value == 'across'){
+    p.style.textDecoration = 'line-through';
+    }
+    if (this.value == 'bold' ) {
+    p.style.fontWeight = 'bold';
+  }
+   if (this.value == 'red') {
+    p.style.color = 'red';
+  }
+    this.removeEventListener('change', func);
+    this.addEventListener('change', funcTwo);
+  }
+  } 
+  function funcTwo(){
+    if (!this.checked) {
+    p.style.cssText = 'none';
+     this.removeEventListener('change', funcTwo);
+    this.addEventListener('change', func);
+   }
+  }
+ 
+</script>
+</body>
+</html>
