@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+#table {
+  margin: 50px auto;
+  border-collapse: collapse;
+
+}
+th, td {
+ border: 1px solid black;
+  width: 200px;
+  height: 30px;
+  text-align: left;
+  padding-left: 2px;
+
+}
+.alignTd {
+  text-align: right;
+}
+#tableTwo {
+   margin: auto;
+    }
+.noBorder {
+  border: 1px solid white;
+}
+
+</style>
+<body>
+<form id='form'>
+  <input type="text" name="" value='1'>
+  <input type="text" name="" value='2'>
+  <input type="text" name="" value='3'>
+  </form>
+  <button id='button'>Click me</button>
+  <script>
+   var button = document.getElementById('button');
+   button.addEventListener('click', getForm);
+   function getForm(){
+    var form = document.getElementById('form');
+    var sum = 0;
+    for (var i = 0; i < form.length; i++) {
+      sum += parseInt(form[i].value);     
+    }
+    alert(sum);
+   }
+</script>
+</body>
+</html>

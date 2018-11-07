@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+#table {
+      margin: 50px auto;
+      border-collapse: collapse;
+
+}
+th, td {
+      border: 1px solid black;
+      width: 200px;
+      height: 30px;
+      text-align: left;
+      padding-left: 2px;
+
+}
+.alignTd {
+      text-align: right;
+}
+#tableTwo {
+      margin: auto;
+    }
+.noBorder {
+      border: 1px solid white;
+}
+
+</style>
+<body>
+	<table  cellspacing="0" id='table'>
+       <tr>
+         <th>Имя</th>
+         <th>Фамилия</th>
+       </tr> 
+       <tr>
+         <td></td>
+         <td></td>
+       </tr>   
+  </table>
+  
+    <table id='tableTwo'>
+        <tr>
+          <td class='alignTd noBorder'>Имя</td>
+          <td class = 'noBorder'><input type="text" placeholder="Введите имя"  maxlength="50" size="20" id='inputName'></td>
+        </tr>
+        <tr>
+          <td class='alignTd noBorder'>Фамилия</td>
+          <td class = 'noBorder'><input type="text" placeholder="Введите фамилию" maxlength="50" size="20" id='input'></td> 
+        </tr>
+        <tr> 
+          <td class = 'noBorder'></td>
+          <td class = 'noBorder'> <input type="submit" value="Добавить" id='button'></td>
+      </tr>
+    </table>
+  <script>
+var button = document.getElementById('button');
+var table = document.getElementById('table');
+button.addEventListener('click', addNewUser);
+function addNewUser(){
+        var inputName = document.getElementById('inputName');
+        var input = document.getElementById('input');
+        var tr = document.createElement('tr');
+        table.appendChild(tr);
+        var td = document.createElement('td');
+        td.innerHTML = inputName.value;
+        tr.appendChild(td);
+       var tdTwo = document.createElement('td');
+        tdTwo.innerHTML = input.value;
+        tr.appendChild(tdTwo);
+
+}
+table.addEventListener('click', changeName);
+function changeName() {
+        event.target.innerHTML = prompt('Изменить имя или фамилию', '');
+}
+</script>
+</body>
+</html>
