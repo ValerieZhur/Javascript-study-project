@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+
+</style>
+<body>
+<input type='text'id='input'>
+<p id='pr'></p>
+ <script>
+ 	var input = document.getElementById('input');
+ 	var pr = document.getElementById('pr');
+ 	input.addEventListener('keypress', func);
+ 	function func(event){
+ 	var code = event.keyCode;
+       if(code == 13) {
+       	pr.innerHTML = input.value;
+        input.value = '';//по нажатию Enter введенный текст попадает в абзац под инпутом, а содержимое инпута очищается.
+       }
+
+ 	}
+</script>
+</body>
+</html>

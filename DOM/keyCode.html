@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+	
+</style>
+<body>
+	<input id="input">
+<div id="result"></div>
+ <script>
+var input = document.getElementById('input');
+var result = document.getElementById('result');
+input.addEventListener('keypress', func);
+function func(event){
+	var code = event.keyCode;
+	result.innerHTML = code;
+
+}
+</script>
+</body>
+</html>

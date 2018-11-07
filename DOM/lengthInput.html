@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+</style>
+<body>
+<input type="text" placeholder="Введите число" id="input">
+
+ <script>
+ 	var input = document.getElementById('input');
+ 	input.addEventListener('blur', func);
+ 	function func() {
+ 		var lengthInput = input.value;
+ 	    for (var i = 0; i < lengthInput.length; i++) {
+ 	    	var createInput = document.createElement('input');
+ 	    	var parent = input.parentElement;
+ 	    	createInput.value = lengthInput[i];
+ 	 	   	parent.appendChild(createInput);
+
+ 	    }
+ 	}
+</script>
+</body>
+</html>
+

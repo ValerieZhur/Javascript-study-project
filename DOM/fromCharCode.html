@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+	
+</style>
+<body>
+	<input id="input">
+	<br><br>
+<p>Нажатая клавиша: <span id="result">?</span></p>
+ <script>
+var input = document.getElementById('input');
+var result = document.getElementById('result');
+input.addEventListener('keypress', func);
+function func(event){
+	var code = String.fromCharCode(event.keyCode); /*преобразует код клавиши event.keyCode в строку*/
+	result.innerHTML = code;
+
+}
+</script>
+</body>
+</html>

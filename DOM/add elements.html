@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+
+</style>
+<body>
+	<ul id='ul'>		
+		<li>пункт 1</li>
+		<li>пункт 2</li>
+		<li>пункт 3</li>
+    </ul>
+    <button id="button">Новый li</button>
+ <script>
+ 	var ul = document.getElementById('ul');
+ 	var button = document.getElementById('button')
+ 	ul.addEventListener('click', addSign);
+ 	function addSign(){
+ 		event.target.innerHTML = event.target.innerHTML + '!';
+ 	}
+ 	button.addEventListener('click', addLi);
+ 	function addLi(){
+        var li = document.createElement('li');
+        li.innerHTML = 'пункт';
+        ul.appendChild(li);
+ 	}
+</script>
+</body>
+</html>
