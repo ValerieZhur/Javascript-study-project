@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style >
+#div {
+  border: 1px solid black;
+  width: 205px;
+  height: 205px;
+  margin: 0 auto;
+  position: relative;
+}
+#littleDiv {
+  border: 1px solid black;
+  width: 185px;
+  height: 30px;
+  margin: 6px;
+  padding-right: 5px;
+  text-align: right;
+  background-color: white
+}
+#miniDiv {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+
+}
+.divNumber {
+   border: 1px solid black;
+   width: 40px;
+   height: 30px;
+   text-align: center;
+   float:left;
+   margin-left: 7px;
+   margin-top: 5px;
+   line-height: 30px;
+}
+.button:hover {
+ background-color: black;
+ color: white;
+ cursor: pointer
+}
+
+</style>
+<body>
+<div id='div'>    
+      <input type=text id='littleDiv' disabled>
+      <div id=miniDiv class='button num'data-type='c' id='clean'>C</div>      
+            <div class='divNumber button num'data-type='7' >7</div>
+            <div class='divNumber button num'data-type='8' >8</div>
+            <div class='divNumber button num'data-type='9'>9</div>
+            <div class='divNumber button num'data-type='/'>÷</div>
+            <div class='divNumber button num'data-type='4'>4</div>
+            <div class='divNumber button num'data-type='5' >5</div>
+            <div class='divNumber button num'data-type='6' >6</div>
+            <div class='divNumber button num'data-type='*' >×</div> 
+            <div class='divNumber button num'data-type='1' >1</div>
+            <div class='divNumber button num'data-type='2' >2</div>
+            <div class='divNumber button num'data-type='3' >3</div>
+            <div class='divNumber button num'data-type='-'>-</div> 
+            <div class='divNumber button num'data-type='0'>0</div>
+            <div class='divNumber button num'data-type='.'>.</div>
+            <div class='divNumber button num'data-type='='>=</div>
+            <div class='divNumber button num'data-type='+'>+</div> 
+     
+</div>
+ <script>
+  var input = document.getElementById('littleDiv');
+  var button = document.getElementsByClassName('num');
+  var clean = document.getElementById('clean');
+ var result = '';
+  for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', func);
+  }
+ function func() {
+  var type = this.dataset.type;
+  if ( type ==='='){
+        result = eval(result);
+       input.value = result;
+       return;
+     } else if (type ==='c'){
+        result = '';
+     }else {
+      result +=type;
+     }
+     input.value = result;
+}
+
+ 
+
+  
+   
+</script>
+</body>
+</html>

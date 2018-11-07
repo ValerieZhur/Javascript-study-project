@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+</head>
+<style >
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.panelTitle {
+ padding: 8px 15px;
+ background-color: #f5f5f5;
+ border: 1px solid #c0c0c0;
+ font-size: 20px;
+ color: #333;
+ border-radius: 4px;
+ font-weight: 400;
+ cursor: pointer;
+ margin-bottom: 10px;
+}
+.panelBody {
+  
+  display: none;
+  margin-bottom: 10px;
+  background: #fff;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #333;
+  text-align: justify;
+
+
+}
+.panelActive {
+  /*margin-bottom: 0;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;*/
+  background-color: #007fff;
+  color: white;
+}
+
+.panelActive + .panelBody {
+  display: block;
+}
+.panelBody p + p {
+  padding-top: 10px;
+}
+</style>
+<body>
+<div class='container'>
+    <div class='panelGroup'>
+        <h3 class='panelTitle'>JavaScript</h3>
+        <div class='panelBody'>
+          <p>JavaScript — прототипно-ориентированный сценарный язык программирования. Является реализацией языка ECMAScript.</p>
+          <p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
+        </div>
+        <h3 class='panelTitle'>Jquery</h3>
+        <div class='panelBody'>
+          <p>jQuery — библиотека JavaScript, фокусирующаяся на взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет удобный API для работы с AJAX. Сейчас разработка jQuery ведётся командой jQuery во главе с Джоном Резигом.
+          </p>
+        </div>
+        <h3 class='panelTitle'>DOM</h3>
+        <div class='panelBody'>
+            <p>DOM — это не зависящий от платформы и языка программный интерфейс, позволяющий программам и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, а также изменять содержимое, структуру и оформление таких документов. </p>
+      </div>
+      <h3 class='panelTitle'>CSS</h3>
+      <div class='panelBody'>
+           <p>CSS — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.</p>
+      </div>
+    </div>
+</div>
+ <script>
+var panelItem = document.querySelectorAll('.panelTitle'),
+  active = document.getElementsByClassName('panelActive');
+
+Array.from(panelItem).forEach(function(item, i, panelItem) { //Метод Array.from() создаёт новый экземпляр Array из массивоподобного или итерируемого объекта. Array.from(arrayLike[, mapFn[, thisArg]]); Метод «arr.forEach(callback[, thisArg])» используется для перебора массива. callback(item, i, arr) item – очередной элемент массива. i – его номер. arr – массив, который перебирается.
+  item.addEventListener('click', function(e) {
+    if (active.length > 0 && active[0] !== this) // если есть активный элемент, и это не тот по которому кликнули
+      active[0].classList.remove('panelActive'); // убрать класс panel-active
+
+    // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
+    this.classList.toggle('panelActive');
+   
+  });
+});
+
+</script>
+
+</body>
+</html> 
