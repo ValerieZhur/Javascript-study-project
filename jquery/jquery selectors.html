@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+</head>
+<body>
+  <ul>
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+  </ul>
+<script>
+       //$('li:eq(3)').css('color', 'red'); //выбрать li под номером 3
+       $('li:lt(10)').css('color', 'green'); //выбрать элементы с номером, меньшим 10
+       $('li:gt(8)').css('color', 'orange'); //выбрать элементы с номером,большим и включая 
+       $('li:first').css('border-bottom','1px solid red');//выбрать первый элемент
+       $('li:last').css('border-bottom','1px solid red');//выбрать последний элемент
+</script>
+</body>
+</html>

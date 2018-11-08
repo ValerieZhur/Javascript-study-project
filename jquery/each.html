@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+</head>
+<body>
+  <h1>Заголовок h1</h1>
+  <h2>Заголовок h2</h2>
+  <p>Параграф 1</p>
+  <p>Параграф 2</p>
+  <p>Параграф 3</p>
+  <p>Параграф 4</p>
+  <p>Параграф 5</p>
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+  </ul>
+
+<script>
+       $('p').each(function(){alert($(this).html())});
+       $(':header').each(function(){alert($(this).html())});
+       /*$('li').each(function(index){$(this).html(index)});*/
+       $('li').each(function(index){$(this).append(index)}); //добавить в конец содержимого
+</script> 
+</body>
+</html>

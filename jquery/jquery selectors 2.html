@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+</head>
+<body>
+      <ol> Numbers
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ol>
+      <ol> Numbers
+          <li class="www">4</li>
+          <li class="www">5</li>
+          <li class="www">6</li>
+          <li class="www">7</li>
+     </ol>
+     <ol> Numbers
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+      </ol>
+<script>
+       $('li:first-child').css('color', 'orange');
+       $('li:last-child').css('color', 'red');
+       $('li:even').css('font-weight', 'bold');//выбрать четные числа
+       $('li:odd').css('text-decoration', 'underline');//выбрать нечетные числа
+       $('li.www').parent().css('color', 'red');
+</script>
+</body>
+</html>
