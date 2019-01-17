@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>  
+    </head>
+    <body>
+    <input type='checkbox'checked>
+    <input type='checkbox'checked>
+    <input type='checkbox'checked>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'checked>
+   <script>
+    //$('input').prop('checked',false);
+    //$('input').prop('checked',true); //установить все checkbox в отмеченные
+
+    $('input').each(function (){
+    $(this).prop('checked', !$(this).prop('checked')); //отмеченные в неотмеченные, и наоборот
+    });
+    $('input:last').prop('checked', false);
+
+    </script>
+    </body>
+</html>

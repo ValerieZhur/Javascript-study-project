@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>  
+    </head>
+    <body>
+   <input value='one' class='in' type='text'>
+   <input value='two'   type='text'>
+   <input value='three'  type='text'>
+   <textarea class='text'>Разнообразный и богатый опыт курс на социально-ориентированный национальный проект обеспечивает актуальность направлений прогрессивного развития. Практический опыт показывает, что начало повседневной работы по формированию позиции требует определения и уточнения ключевых компонентов планируемого обновления? Таким образом, постоянный количественный рост и сфера нашей активности позволяет выполнить важнейшие задания по разработке ключевых компонентов планируемого обновления?</textarea>
+   <input value='1' class='number'>
+   <input value='2' class='number'>
+   <input value='3' class='number'>
+   <input value='4' class='number'>
+   <script>
+      alert($('input.in').val()); //выведет значение value
+      alert($('textarea.text').val()); //выведет содержимое
+      $('input').each(function(){
+        alert($(this).val());
+      });
+      $('textarea.text').val('!');
+      $('input.number').each(function(){
+        var $num = $(this).val();
+       $(this).val(Math.pow($num,2));
+      });
+    </script>
+    </body>
+</html>

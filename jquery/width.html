@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>  
+    <style>
+    div {
+        width: 100px;
+        border: 2px solid grey;
+        height: 100px;
+        background-color: blue;
+        float: left;
+        padding: 10px;
+        margin: 10px;
+    }
+    div.div-last{
+        background-color: black;
+        border: 2px solid red;
+        width: 150px;
+    }
+    #wraper {
+        background-color: white;
+        border-color: white;
+        width: 70%;
+    }
+    </style>
+    </head>
+    <body>
+    <div id='wraper'>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class ='div-last'></div>
+    </div>
+   <script>
+    alert($('div:last').width());
+    alert($('div:nth-child(2)').width());
+
+    $('div').children(':lt(3)').each(function() {
+    var width = $(this).innerWidth();
+    var height = $(this).innerHeight();
+    alert("Ширина: "+width+" Высота: "+height);
+    });
+    $('div').children(':lt(3)').each(function() {
+    var width = $(this).outerWidth();
+    var height = $(this).outerHeight();
+    alert("Ширина: "+width+" Высота: "+height);
+    });
+    $('div').children(':lt(3)').each(function() {
+    var width = $(this).outerWidth(true);
+    var height = $(this).outerHeight(true);
+    alert("Ширина: "+width+" Высота: "+height);
+    });
+    
+
+    </script>
+    </body>
+</html>

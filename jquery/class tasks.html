@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>  
+    </head>
+    <body>
+   <ul>
+       <li>1</li>
+       <li>2</li>
+       <li class='www'>3</li>
+   </ul>
+   <a>ссылка 1</a>
+   <a class='www'>ссылка 2</a>
+   <script>
+    $('li').addClass('test');//добавить класс
+    /*$('li').removeClass('www');*/ //удалить класс
+    $('li').toggleClass('www'); //добавить класс, если нет, удалить, если есть
+    $('a').each(function(){
+        if($(this).hasClass('www') == true){
+            alert(true);
+        }
+    });
+    
+    </script>
+    </body>
+</html>

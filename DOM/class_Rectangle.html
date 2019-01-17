@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Rectangle {
+			constructor(width, height){
+				this.elem = document.createElement('div');
+				this.elem.style.border = '2px solid black';
+				this.elem.style.borderRadius = '20px';
+				this.elem.style.backgroundColor = 'green';			
+				this.setHeight(height);
+				this.setWidth(width);
+				document.body.appendChild(this.elem);
+				
+			}
+			getHeight(height){
+                 return this.elem.style.height;
+			}
+			getWidth(width){
+				return this.elem.style.width;
+			}
+			setHeight(height){
+				this.elem.style.height = height + 'px';
+				return this;
+			}
+			setWidth(width){
+				this.elem.style.width = width + 'px';
+				return this;
+			}
+			setMargin(marginTop){
+				this.elem.style.marginTop = marginTop + 'px';
+				return this;
+			}
+		}
+	var rectange = new Rectangle(300,300);
+	var rectange2 = new Rectangle();
+    rectange2.setWidth(200).setHeight(200).setMargin(10);
+
+
+	</script>
+
+</body>
+</html>

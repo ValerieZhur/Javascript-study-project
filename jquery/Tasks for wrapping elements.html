@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>  
+    </head>
+    <body>
+      <h2></h2>
+      <h2></h2>
+      <h2></h2>
+      <h1 class='test'></h1>
+      <h1 class='test'></h1>
+      <h1></h1>
+      <div><p></p></div>
+      <div><p></p></div>
+      <div><p></p></div>
+      <script>
+        $('h2').wrap('<div></div>');//оборачивает элементы в заданный тег
+        $('.test').wrap('<div></div>');
+        $('h1').wrapInner('<i></i>');//оборачивает элементы внутри в заданный тег
+        $('h2').wrapAll('<i></i>');//оборачивает все элементы набора в один заданный тег
+        $('p').unwrap('<div></div>');//осуществляет операцию, обратную методу wrap
+      </script>
+    </body>
+</html>

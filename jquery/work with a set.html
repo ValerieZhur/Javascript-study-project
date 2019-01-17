@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script> 
+  </head>
+   <body>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li class='test www'>3</li>
+                <li>4</li>
+                <li class='www'>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li class='www'>8</li>
+                <li>9</li>
+            </ul>
+    <script>
+        $('li').not('.test');//исключить из набора
+        $('li').first();//найти первый элемент
+        $('li').last();//найти последний элемент
+        $('li').eq(4);// пятый элемент
+        $('li').eq(-2);//предпоследний элемент
+        $('li').slice(2,9);//с 3-го по 10-й
+        $('li').filter('.www');// выбрать элементы с классом www
+
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<p></p>
+	</div>
+
+	<script type="text/javascript">
+		class Elem {
+	constructor(selector){
+			this.elem = document.querySelector(selector);
+						
+			}
+			html(text){
+				this.elem.innerHTML = text;
+				return this;
+			}
+			append(text){
+				this.elem.innerHTML = text + this.elem.innerHTML;
+				return this;
+			}
+			prepend(text){
+				this.elem.innerHTML = this.elem.innerHTML + text;
+			}
+			attr(name, value){
+				this.elem.setAttribute(name, value);
+				return this;
+			}
+
+}
+
+
+var elem = new Elem('p');
+
+elem.html('hello').append('!').prepend('!');
+elem.attr('class', 'www').attr('title', 'hello');
+		
+	</script>
+
+</body>
+</html>
+
+
+

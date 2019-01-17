@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script> 
+    <style>
+        #divBig {
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+   </head>
+   <body>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li class='test'>3</li>
+                <li>4</li>
+                <li class='www'>5</li>
+                <li class='www'>6</li>
+                <li>7</li>
+                <li class='www'>8</li>
+                <li><b>9</b></li>
+            </ul>
+            <p><b>Hello World!</b></p>
+            <div id='divBig'>
+                <div>
+                <b>Hello World!</b>
+                </div>
+            </div>
+    <script>
+     $('test').parent(); //Найти родителя элемента с классом test
+     //$('b').parents().css('color', 'red'); // Найти родителей всех тегов <b> и сделайте их красным цветом
+     $('b').closest('')
+     
+        
+    </script>
+    </body>
+</html>

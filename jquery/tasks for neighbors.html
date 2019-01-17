@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script> 
+  </head>
+   <body>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li class='test'>3</li>
+                <li>4</li>
+                <li class='www'>5</li>
+                <li class='www'>6</li>
+                <li>7</li>
+                <li class='www'>8</li>
+                <li>9</li>
+            </ul>
+    <script>
+        $('.test').next(); //Найти первый элемент, который стоит непосредственно за элементом с классом test
+        $('.test').prev(); //Найти первый элемент, который стоит непосредственно перед элементом с классом test
+        $('.test').nextAll();
+        $('.test').prevAll();
+        $('.www').nextUntil('.test');// Найти все элементы, которые лежат между элементом с классом www и элементом с классом test 
+        $('.test').prevUntil('.www'); //Найдите все элементы, которые лежат между элементом с классом test и элементом с классом www
+        $('li.www').siblings();//Найти всех соседей <li> с классом www
+        $('li.www').siblings('.test');//Найти всех соседей <li> с классом www, которые (соседи) имеют класс test.
+        $('li.www').siblings(':not(.test)'); //Найти всех соседей <li> с классом www, но не соседа с классом test
+
+    </script>
+    </body>
+</html>
