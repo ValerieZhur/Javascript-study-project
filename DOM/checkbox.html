@@ -29,18 +29,16 @@
    if (this.value == 'red') {
     p.style.color = 'red';
   }
-    this.removeEventListener('change', func);
-    this.addEventListener('change', funcTwo);
+  this.removeEventListener('change', func);
+  this.addEventListener('change', funcTwo);
   }
   } 
   function funcTwo(){
-    if (!this.checked) {
-    p.style.cssText = 'none';
-     this.removeEventListener('change', funcTwo);
-    this.addEventListener('change', func);
+  p.style.cssText = 'none';
+   this.removeEventListener('change', funcTwo);
+   this.addEventListener('change', func);
    }
-  }
- 
+   
 </script>
 </body>
 </html>

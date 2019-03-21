@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style >
+
+</style>
+<body>
+<button>1</button>
+<button>1</button>
+<button>1</button>
+
+ <script>
+ function fib() {
+  var a = 1,
+      b = 1;
+  return function(){
+  for (var i = 3; i <= 3; i++) {
+    var c = a + b;
+    a = b;
+    b = c;
+
+  } 
+  this.innerHTML = b;
+}
+}
+  var button = document.getElementsByTagName('button');
+  for (var i = 0; i < button.length; i++) {
+  	button[i].addEventListener('click', fib());
+  }
+
+</script>
+</body>
+</html>
+
+<!-- function fib(n) {
+  var a = 1,
+      b = 1;
+  for (var i = 3; i <= n; i++) {
+    var c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+} -->
